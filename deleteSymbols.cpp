@@ -3,8 +3,6 @@
 #include <exception>
 using namespace std;
 
-// Дана строка. Удалить слова со M по N
-
 string deleteWords(string text, int m, int n)
 {
     if (m > n || m <= 0 || n <= 0)
