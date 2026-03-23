@@ -70,23 +70,19 @@ int main()
         averageTemp[month] = sum / dayInMonth[month];
     }
 
+    int coldestMonth = 0;
+    int hottestMonth = 0;
+
     cout << "Средние температуры по месяцам:" << endl;
     for (int i = 0; i < 12; i++)
     {
         cout << monthName[i] << ": " << averageTemp[i] << "°C" << endl;
-    }
-    cout << endl;
-
-    int coldestMonth = 0;
-    int hottestMonth = 0;
-
-    for (int i = 1; i < 12; i++)
-    {
         if (averageTemp[i] > averageTemp[hottestMonth])
             hottestMonth = i;
         if (averageTemp[i] < averageTemp[coldestMonth])
             coldestMonth = i;
     }
+    cout << endl;
 
     cout << "Самый холодный месяц: " << monthName[coldestMonth]
          << " (" << averageTemp[coldestMonth] << "°C)" << endl;
